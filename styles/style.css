@@ -1,0 +1,13 @@
+.container{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container div{
+    text-align: center;
+}
+.list-item-box{
+    margin-top: 10px;
+}
