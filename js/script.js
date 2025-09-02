@@ -29,7 +29,14 @@ addButton.addEventListener("click", () => {
 //  Delete Button Functionality Here..........//
 
 deleteBtn.addEventListener("click", ()=>{
-  const ul =  document.getElementById('ulPage');
+  const ulPage = document.getElementById("ulPage")
+  const checkedLi =  document.querySelectorAll("input[type='checkbox']:checked");
+  
+  checkedLi.forEach(item => {
+    const itemParent = item.parentNode;
+    ulPage.removeChild(itemParent);
+  })
+  
   
   
 })
