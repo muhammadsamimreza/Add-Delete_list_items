@@ -10,7 +10,7 @@ const addList = () => {
   li.innerHTML = `
     <input type="checkbox">
     <span>${textValue}</span>
-    <button>Delete</button>
+    <button onclick="justLi(this)">Delete</button>
    `;
 
    ul.appendChild(li);
@@ -26,7 +26,7 @@ addButton.addEventListener("click", () => {
 });
 
 
-//  Delete Button Functionality Here..........//
+//  Main Delete Button Functionality Here..........//
 
 deleteBtn.addEventListener("click", ()=>{
   const ulPage = document.getElementById("ulPage")
@@ -35,8 +35,12 @@ deleteBtn.addEventListener("click", ()=>{
   checkedLi.forEach(item => {
     const itemParent = item.parentNode;
     ulPage.removeChild(itemParent);
-  })
-  
-  
-  
+  }) 
 })
+
+// Single Delete Button ///
+
+const justLi =(btn)=>{
+  const li = btn.parentNode;
+  li.parentNode.removeChild(li);
+}
